@@ -6,8 +6,8 @@ import {
     encryptUserPassword,
     compareUserPassword,
 } from "../app/utils"
-const User = require("../models").User;
 
+const User = require("../models").User;
 
 module.exports = {
     list(req: Request, res: Response) {
