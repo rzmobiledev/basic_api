@@ -4,7 +4,9 @@
   "description": "Simple CRUD API Demo",
   "main": "src/main.ts",
   "scripts": {
-    "dev": "nodemon app/main.ts"
+    "dev": "nodemon app/main.ts",
+    "start": "node dist/app/main.js",
+    "build": "rimraf ./dist && tsc"
   },
   "author": "Safrizal",
   "license": "ISC",
@@ -14,6 +16,8 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.0",
     "nodemon": "^3.1.2",
+    "rimraf": "^5.0.7",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {
