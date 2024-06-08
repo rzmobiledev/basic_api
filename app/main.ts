@@ -5,13 +5,13 @@ import bodyParser from "body-parser";
 // Router
 import userRoutes from "./routes";
 
-dotenv.config();
+dotenv.config();  
 const app: Express = express();
-const port = Number(process.env.HOSTPORT);
-const host = String(process.env.HOST);
+const port: number = Number(process.env.HOST_PORT);
+const hostname: string = String(process.env.HOST_NAME);
 
 app.use(bodyParser.json());
 app.get("/", (req: Request, res: Response) => res.send({home: "Welcome Home"}));
 app.use("/api", userRoutes);
 
-app.listen(port, host, () => console.log(`Server running on port ${port}`))
+app.listen(port, hostname, () => console.log(`Server running on http://${hostname}:${port}/`))

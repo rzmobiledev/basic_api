@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon app/main.ts",
     "start": "node dist/app/main.js",
-    "build": "rimraf ./dist && tsc"
+    "build": "rimraf ./dist && tsc",
+    "check_db": "node dist/app/check_db.js"
   },
   "author": "Safrizal",
   "license": "ISC",
